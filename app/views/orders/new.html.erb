@@ -1,0 +1,37 @@
+
+<h1> Place a New TMGT Order!</h1>
+
+	<div>
+		<%= form_for @order do |f| %>
+		
+		<p><%= f.text_field :name %></p>
+
+		<!-- testing item grouping -->
+		<p>Bread</p>
+		<% @items.each do |i| %>
+			<% if i.category == 'Bread' %>
+				<%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %><br />
+			<% end %>
+		<% end %>
+
+		<p>Jars</p>
+		<% @items.each do |i| %>
+			<% if i.category == 'Jars' %>
+				<%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %><br />
+			<% end %>
+		<% end %>
+
+
+		<br />
+
+
+		<div>
+			<%= f.submit %>
+		</div>
+
+
+		<% end %>
+
+
+	</div>
+

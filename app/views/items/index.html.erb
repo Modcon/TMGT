@@ -1,0 +1,23 @@
+<!-- <div class="Left">
+<div class="MarketMenu">MARKET MENU</div>
+<div class="Meat">MEAT</div>
+<div class="Jars">JARS & PRESERVES</div>
+<div class="Drinks">DRINKS & BREWS</div>
+<div class="HallCloset">HALL CLOSET</div>
+</div>
+
+<div class="Right">
+  <div class="Bread">BREAD</div>
+  <div class="Dairy">DAIRY</div>
+  <div class="BakedGoods">BAKED GOODS</div>
+  <div class="Bulk">BULK</div>
+</div>
+ -->
+<% @items.each do |i| %>
+	<div>
+		<p><%= i.name %></p>
+		<p><%= i.category %></p>
+		<p><%= i.price %></p>
+	</div>
+
+<% end %>

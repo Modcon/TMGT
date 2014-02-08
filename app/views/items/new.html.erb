@@ -1,0 +1,24 @@
+<h1>THE MAGICAL GROCERY TOUR</h1>
+
+<h3> Add new menu items </h3>
+
+<%= form_for @item do |f| %>
+	<div>
+		<p><%= f.label :name %></p>
+		<p><%= f.text_field :name %></p>
+	</div>
+
+	<div>
+		<p><%= f.label :category %></p>
+		<p><%= f.text_field :category %></p>
+	</div>
+
+	<div>
+		<p><%= f.label :price %></p>
+		<p><%= f.text_field :price %></p>
+	</div>
+
+	<div><%= f.submit %></div>
+
+
+<% end %>
