@@ -18,9 +18,19 @@ html {
 
 };
 
+.checkbox { 
+	height: 50px;
+	width: 50px;
+    border: 1px solid #888;
+    float: left;
+    padding: 1px;
+    margin: 20px;
+}
+
 @import "bootstrap";
 
 
 body {
  margin-left: 100px;
 };
+

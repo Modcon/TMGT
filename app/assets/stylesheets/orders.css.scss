@@ -20,10 +20,12 @@ padding: 10px;
 
 h1 {
 	font-weight: bolder;
-	font-family: 'Montserrat Alternates', cursive;
-	font-size: 72px;
+	font-family: 'Duru Sans', cursive;
+	font-size: 100px;
 	color: hsl(3, 95%, 50%);
 	text-align: center;
+		-webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
 };
 
 h2 {
@@ -34,32 +36,35 @@ h2 {
 	margin: 10px 10px;
 	padding: 10px 3px;
 	text-indent: 5px;
+	-webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
 };
 
 p {
 
 	font-family: 'Stint Ultra Expanded', cursive; 
+	font-weight: bolder;
 	font-size: 24px;	
 
 };
 
 .Left {
-  width: 350 px;
   border: 3px solid red;
   margin: 10px;
   padding: 5px;
   float: left;
   margin-left: 4px;
+  display: block;
 
 };
 
 .Right {
-  width: 350 px;
   border: 3px solid red;
   margin: 10px;
   padding: 5px;
   float: left;
   margin-left: -4px;
+  display: block;
 };
 
 .order_button {
@@ -68,9 +73,8 @@ p {
 	font-weight: bold;
 	font-size: 32px;
 	border: 2px solid black;
-	text-shadow: 3px 3px hsl(3, 95%, 100%);
 	color: hsl(3, 95%, 50%);
-	background: hsl(3, 95%, 100%);
+	background: hsl(3, 95%, 98%);
 	height: 150px;
 	 -moz-border-radius:75px;
 	 -webkit-border-radius: 75px;
