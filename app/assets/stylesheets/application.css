@@ -11,3 +11,16 @@
  *= require_self
  *= require_tree .
  */
+
+html {
+	background-image: url('/assets/images/natural_paper.png');
+
+
+};
+
+@import "bootstrap";
+
+
+body {
+ margin-left: 100px;
+};

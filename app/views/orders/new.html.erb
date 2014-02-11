@@ -1,32 +1,96 @@
+<head>
+<link href='http://fonts.googleapis.com/css?family=Nixie+One|Codystar|Poller+One|Montserrat+Alternates|Stint+Ultra+Expanded|Ribeye+Marrow' rel='stylesheet' type='text/css'>
+</head>
 
-<h1> Place a New TMGT Order!</h1>
+<header>
+	<h1> The Magical Grocery Tour </h1>
+</header>
+<body>
 
 	<div>
-		<%= form_for @order do |f| %>
-		
-		<p><%= f.text_field :name %></p>
+		<div class="CustomerName">
+			<%= form_for @order do |f| %>
+			<p>Your Name</p>
+			<p><%= f.text_field :name %></p>
+		</div>
+		<div class="Left">
 
 		<!-- testing item grouping -->
-		<p>Bread</p>
+		<h2>Market Menu</h2>
 		<% @items.each do |i| %>
-			<% if i.category == 'Bread' %>
-				<%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %><br />
+			<% if i.category == 'Market Menu' %>
+				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+			<% end %>
+		<% end %><br />
+
+		<h2>Meat</h2>
+		<% @items.each do |i| %>
+			<% if i.category == 'Meat' %>
+				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
 			<% end %>
 		<% end %>
 
-		<p>Jars</p>
+		<h2>Jars</h2>
 		<% @items.each do |i| %>
 			<% if i.category == 'Jars' %>
-				<%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %><br />
+				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
 			<% end %>
 		<% end %>
+
+
+		<h2>Drinks & Brews</h2>
+		<% @items.each do |i| %>
+			<% if i.category == 'Drinks and Brews' %>
+				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+			<% end %>
+		<% end %>
+
+
+		<h2>Hall Closet</h2>
+		<% @items.each do |i| %>
+			<% if i.category == 'Hall Closet' %>
+				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+			<% end %>
+		<% end %>
+
+	</div>
+
+	<div class="Right">
+		<h2>Bread</h2>
+		<% @items.each do |i| %>
+			<% if i.category == 'Bread' %>
+				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+			<% end %>
+		<% end %>
+
+		<h2>Dairy</h2>
+		<% @items.each do |i| %>
+			<% if i.category == 'Dairy' %>
+				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+			<% end %>
+		<% end %>
+
+		<h2>Baked Goods</h2>
+		<% @items.each do |i| %>
+			<% if i.category == 'Baked Goods' %>
+				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+			<% end %>
+		<% end %>
+
+		<h2>Bulk</h2>
+		<% @items.each do |i| %>
+			<% if i.category == 'Bulk' %>
+				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+			<% end %>
+		<% end %>
+	</div>
 
 
 		<br />
 
 
 		<div>
-			<%= f.submit %>
+			<%= f.submit 'Order', :class => 'order_button' %>
 		</div>
 
 
@@ -34,4 +98,5 @@
 
 
 	</div>
+</body>
 

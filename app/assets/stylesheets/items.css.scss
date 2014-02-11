@@ -1,72 +1,7 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.Left {
-  height: 500 px;
-  border: 3px solid red;
-  margin: 10px;
-  float: left;
-}
 
-.Right {
-  width: 350px;
-  height: 500 px;
-  border: 3px solid green;
-  margin: 10px;
-  float: right;
-}
-
-.MarketMenu {
-  width: 350px;
-  height: 500 px;
-  border: 3px solid red;
-  margin: 10px;
-}
-
-.Meat {
-  height: 500 px;
-  border: 3px solid red;
-  margin: 10px;
-}
-
-.Jars {
-  height: 500 px;
-  border: 3px solid red;
-  margin: 10px;
-}
-
-.Drinks {
-  height: 500 px;
-  border: 3px solid red;
-  margin: 10px;
-}
-
-.HallCloset {
-  height: 500 px;
-  border: 3px solid red;
-  margin: 10px;
-}
-
-.Bread {
-  height: 500 px;
-  border: 3px solid green;
-  margin: 10px;
-}
-
-.Dairy {
-  height: 500 px;
-  border: 3px solid green;
-  margin: 10px;
-}
-
-.BakedGoods {
-  height: 500 px;
-  border: 3px solid green;
-  margin: 10px;
-}
-
-.Bulk {
-  height: 500 px;
-  border: 3px solid green;
-  margin: 10px;
+.item {
+  margin-left: 100px;
 }
