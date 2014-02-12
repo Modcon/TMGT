@@ -1,19 +1,18 @@
 <head>
-<link href='http://fonts.googleapis.com/css?family=Nixie+One|Duru+Sans|Poller+One|Montserrat+Alternates|Stint+Ultra+Expanded' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Nixie+One|Poller+One|Montserrat+Alternates|Stint+Ultra+Expanded|Duru+Sans&effect=canvas-print' rel='stylesheet' type='text/css'>
 </head>
 
-<header>
+<header class="font-effect-canvas-print">
 	<h1> The Magical Grocery Tour </h1>
 </header>
-<body>
-
+<body class="font-effect-canvas-print">
 	<div>
 		<div class="CustomerName">
 			<%= form_for @order do |f| %>
 			<p>Your Name</p>
 			<p><%= f.text_field :name %></p>
 		</div>
-		<div class="Left">
+		<div class="Left", class="font-effect-canvas-print">
 
 		<!-- testing item grouping -->
 		<h2>Market Menu</h2>
