@@ -5,91 +5,108 @@
 <header class="font-effect-canvas-print">
 	<h1> The Magical Grocery Tour </h1>
 </header>
-<body class="font-effect-canvas-print">
-	<div>
+<body>
 		<div class="CustomerName">
 			<%= form_for @order do |f| %>
-			<p>Your Name</p>
+			<p class="font-effect-canvas-print">Your Name</p>
 			<p><%= f.text_field :name %></p>
 		</div>
-		<div class="Left", class="font-effect-canvas-print">
+		
+		<div class="Left">
+			<div class="font-effect-canvas-print">
+			<h2>Market Menu</h2>
+			<% @items.each do |i| %>
+				<% if i.category == 'Market Menu' %>
+					<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+				<% end %>
+			<% end %><br />
+			</div>
 
-		<!-- testing item grouping -->
-		<h2>Market Menu</h2>
-		<% @items.each do |i| %>
-			<% if i.category == 'Market Menu' %>
-				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+			<div class="font-effect-canvas-print">
+			<h2>Meat</h2>
+			<% @items.each do |i| %>
+				<% if i.category == 'Meat' %>
+					<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+				<% end %>
 			<% end %>
-		<% end %><br />
+		    </div>
 
-		<h2>Meat</h2>
-		<% @items.each do |i| %>
-			<% if i.category == 'Meat' %>
-				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+		    <div class="font-effect-canvas-print">
+			<h2>Jars</h2>
+			<% @items.each do |i| %>
+				<% if i.category == 'Jars' %>
+					<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+				<% end %>
 			<% end %>
-		<% end %>
+			</div>
 
-		<h2>Jars</h2>
-		<% @items.each do |i| %>
-			<% if i.category == 'Jars' %>
-				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+
+			<div class="font-effect-canvas-print">
+			<h2>Drinks & Brews</h2>
+			<% @items.each do |i| %>
+				<% if i.category == 'Drinks and Brews' %>
+					<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+				<% end %>
 			<% end %>
-		<% end %>
+		    </div>
 
-
-		<h2>Drinks & Brews</h2>
-		<% @items.each do |i| %>
-			<% if i.category == 'Drinks and Brews' %>
-				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+		    <div class="font-effect-canvas-print">
+			<h2>Hall Closet</h2>
+			<% @items.each do |i| %>
+				<% if i.category == 'Hall Closet' %>
+					<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+				<% end %>
 			<% end %>
-		<% end %>
-
-
-		<h2>Hall Closet</h2>
-		<% @items.each do |i| %>
-			<% if i.category == 'Hall Closet' %>
-				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
-			<% end %>
-		<% end %>
+			</div>
 
 	</div>
 
 	<div class="Right">
+
+		<div class="font-effect-canvas-print">
 		<h2>Bread</h2>
 		<% @items.each do |i| %>
 			<% if i.category == 'Bread' %>
 				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
 			<% end %>
 		<% end %>
+		</div>
 
+		<div class="font-effect-canvas-print">
 		<h2>Dairy</h2>
 		<% @items.each do |i| %>
 			<% if i.category == 'Dairy' %>
 				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
 			<% end %>
 		<% end %>
+		</div>
 
+		<div class="font-effect-canvas-print">
 		<h2>Baked Goods</h2>
 		<% @items.each do |i| %>
 			<% if i.category == 'Baked Goods' %>
 				<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
 			<% end %>
 		<% end %>
+		</div>
 
+		<div class="font-effect-canvas-print">
 		<h2>Bulk</h2>
 		<% @items.each do |i| %>
 			<% if i.category == 'Bulk' %>
 				<p><%= check_box_tag "order[item_ids][]", i.id, :class => 'check_box' %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
 			<% end %>
 		<% end %>
+		</div>
 	</div>
 
 
 		<br />
 
-
-		<div>
-			<%= f.submit 'Order', :class => 'order_button' %>
+		<div class="font-effect-canvas-print"> 
+			<div class="order_button_div">
+				<%= f.submit 'Order', :class => 'order_button' %>
+			</div>
 		</div>
 
 
