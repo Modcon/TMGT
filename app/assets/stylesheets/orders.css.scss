@@ -12,7 +12,9 @@ html {
 };
 
 header {
-	padding: 10px;
+	display: block;
+	margin: 0 auto;
+	padding: 5px;
 };
 
 body {
@@ -21,7 +23,7 @@ padding: 10px;
 };
 
 h1 {
-	text-align: left;
+	text-align: center;
 	font-family: 'Duru Sans', sans-serif;
 	font-size: 100px;
 	color: hsl(3, 95%, 50%);
@@ -53,44 +55,47 @@ p {
 input[type=checkbox] {
 	width: 25px;
 	height: 25px;
+	outline: 1px solid black;
+	margin-left: 10px;
+	margin-right: 15px;
 };
 
 .Left {
-  border: 3px solid red;
-  margin: 10px;
+  /*border: 3px solid red;*/
+  /*margin: 10px;
   padding: 5px;
   float: left;
-  margin-left: 4px;
+  margin-left: 4px;*/
 };
 
 .Right {
-  border: 3px solid red;
+  /*border: 3px solid red;
   margin: 10px;
   padding: 5px;
   float: left;
   margin-left: -4px;
+  */
 };
 
-.order_button_div {
-	width:800px;
-}
-
 .order_button {
-	position: relative;
-	margin: 0 800px;
+	/*position: relative;*/
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
 	font-weight: bold;
 	font-size: 32px;
 	border: 3px solid black;
 	color: hsl(3, 95%, 50%);
 	background: hsl(3, 95%, 98%);
 	height: 150px;
+	width: 150px;
 	 -moz-border-radius:75px;
 	 -webkit-border-radius: 75px;
-	 width: 150px;
 	 font-family: 'Montserrat Alternates' bold;
 	};
 
 .CustomerName {
 	margin-left: 100px;
-
+	padding: 5px;
+	padding-bottom: 5px;
 };

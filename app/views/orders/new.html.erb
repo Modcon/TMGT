@@ -1,5 +1,5 @@
 <head>
-<link href='http://fonts.googleapis.com/css?family=Nixie+One|Poller+One|Montserrat+Alternates|Stint+Ultra+Expanded|Duru+Sans&effect=canvas-print' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Poller+One|Montserrat+Alternates|Stint+Ultra+Expanded|Duru+Sans&effect=canvas-print' rel='stylesheet' type='text/css'>
 </head>
 
 <header class="font-effect-canvas-print">
@@ -12,12 +12,12 @@
 			<p><%= f.text_field :name %></p>
 		</div>
 		
-		<div class="Left">
+		<div class="Left col-md-6 col-lg-6">
 			<div class="font-effect-canvas-print">
 			<h2>Market Menu</h2>
 			<% @items.each do |i| %>
 				<% if i.category == 'Market Menu' %>
-					<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+					<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %><span> - </span><%= number_to_currency(i.price, :unit => "$") %></p><br />
 				<% end %>
 			<% end %><br />
 			</div>
@@ -26,7 +26,7 @@
 			<h2>Meat</h2>
 			<% @items.each do |i| %>
 				<% if i.category == 'Meat' %>
-					<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+					<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %><span> - </span><%= number_to_currency(i.price, :unit => "$") %></p><br />
 				<% end %>
 			<% end %>
 		    </div>
@@ -35,7 +35,7 @@
 			<h2>Jars</h2>
 			<% @items.each do |i| %>
 				<% if i.category == 'Jars' %>
-					<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %> <%= number_to_currency(i.price, :unit => "$") %></p><br />
+					<p><%= check_box_tag "order[item_ids][]", i.id %><%= i.name %><span>  -  </span><%= number_to_currency(i.price, :unit => "$") %></p><br />
 				<% end %>
 			<% end %>
 			</div>
@@ -58,11 +58,12 @@
 				<% end %>
 			<% end %>
 			</div>
+		</div>
+	
 
-	</div>
 
-	<div class="Right">
-
+	
+	<div class="Right col-md-6 col-lg-6">
 		<div class="font-effect-canvas-print">
 		<h2>Bread</h2>
 		<% @items.each do |i| %>
@@ -103,14 +104,13 @@
 
 		<br />
 
-		<div class="font-effect-canvas-print"> 
-			<div class="order_button_div">
+ 		
+			<div>
 				<%= f.submit 'Order', :class => 'order_button' %>
 			</div>
-		</div>
-
-
+			
 		<% end %>
+
 
 
 	</div>
