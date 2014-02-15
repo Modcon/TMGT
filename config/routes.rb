@@ -15,8 +15,6 @@ TMGT::Application.routes.draw do
   root 'items#index'
 
 
-this is a change.
-
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
