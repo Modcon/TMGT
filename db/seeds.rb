@@ -22,4 +22,3 @@
 	{name: '1 Qt. House Yogurt', category: 'Dairy', price: 20 }, {name: '6 Eggs', category: 'Dairy', price: 3.50 }, {name: '12 Eggs', category: 'Dairy', price: 7 },
 	{name: '6 Eggs', category: 'Dairy', price: 3.50 }, {name: '500g Raw Cultured Butter', category: 'Dairy', price: 12 }, {name: '1/4 Gal. Raw Kefir', category: 'Dairy', price: 6 },
 	{name: 'Raw Goats Milk Laundry Soap', category: 'Hall Closet', price: 8 }, {name: 'Raw Goats Milk Body Soap', category: 'Hall Closet', price: 12 },       ])
-	{name: 'Raw Goats Milk Laundry Soap', category: 'Hall Closet', price: 8 }, {name: 'Raw Goats Milk Body Soap', category: 'Hall Closet', price: 12 },       ])

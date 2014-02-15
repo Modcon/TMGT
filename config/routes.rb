@@ -3,9 +3,19 @@ TMGT::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   resources :items 
+
+    get '/items/:id/edit' =>  'items#edit'
+
+
+
   resources :orders
+  
+
+
   root 'items#index'
 
+
+this is a change.
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

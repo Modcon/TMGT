@@ -8,6 +8,14 @@ class ItemsController < ApplicationController
 		@item = Item.new
 	end
 
+	def edit
+		  @item = Item.find(params[:id])
+	end
+
+	   def show
+      @item = Item.find(params[:id])
+   end
+
 	def create
 		@item = Item.new(item_params)
 		if @item.save
@@ -17,6 +25,17 @@ class ItemsController < ApplicationController
 		end
 	end
 
+	 def update
+    respond_to do |format|
+      if @item.update(item_params)
+        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
+        format.json { render action: 'show', status: :created, location: @item }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @item.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
 	private
 
