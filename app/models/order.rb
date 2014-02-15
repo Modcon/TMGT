@@ -7,4 +7,13 @@ class Order
 
 	  validates :name, presence: true
 
+    def total
+      @total = []
+      items.each do |i|
+        @total << i.price
+      end
+      return @total.sum
+    end
+
 end
+

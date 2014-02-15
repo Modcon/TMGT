@@ -6,6 +6,9 @@
 	<h1> The Magical Grocery Tour </h1>
 </header>
 <body>
+		<% if flash[:error] %>
+    	<div class="alert alert-danger error"><%= flash[:error] %></div>
+    <% end %>
 		<div class="CustomerName">
 			<%= form_for @order do |f| %>
 			<p class="font-effect-canvas-print">Your Name</p>

@@ -1,12 +1,36 @@
 <h1>List of Orders</h1>
+<% grand = [] %>
+<% @orders.each do |order| %>
+<h4><%= order.name.upcase %></h4>
+<table style="width:300px">
+<tr>
+  <th>Item</th>
+  <th>Price</th> 
+</tr>
+<% order.items.each do |i| %>
+<tr>
+  <td><%= i.name %></td>
+  <td><%= number_to_currency(i.price, :unit => "$") %></td> 
+</tr>
+<% end %>
+<tr>
+  <td><b>Total:</b></td>
+  <td><b><%= number_to_currency(order.total, :unit => "$") %></b></td>
+</tr>
+</table>
+<p>-----------------------------------------</p>
+  <% grand << order.total %>
+<% end %>
+  
+<h3>Grand Total: <%= number_to_currency(grand.sum , :unit => "$")%></h3>
 
-<div>
-	<% @orders.each do |order| %>
-		<%= order.name %>
-		<% order.items.each do |i| %>
-			<ul>
-				<li><%= i.name %></li>
-			</ul>
-		<% end %>
-	<% end %>
-</div>
+<h1>Kitchen Tally</h1>
+<% tally = [] %>
+<% @orders.each do |order| %>
+  <% order.items.each do |i| %>
+    <% tally << i.name %>
+  <% end %>
+<% end %>
+<% tally.uniq.each do |t| %>
+  <p><%= tally.count(t) %> x <%= t %></p><br />
+<% end %>

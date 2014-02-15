@@ -18,9 +18,12 @@ class OrdersController < ApplicationController
 		if @order.save
 			redirect_to action: 'index'
 		else
-			render action: 'new'
+			flash[:error] = "Please enter your name"		
+			redirect_to action: 'new'
 		end
 	end
+
+
 
 
 	private
@@ -28,4 +31,5 @@ class OrdersController < ApplicationController
 	def order_params
 		params.require(:order).permit(:name, :item_ids => [])
 	end	
+
 end

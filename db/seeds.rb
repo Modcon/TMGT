@@ -5,7 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+	Item.destroy_all
+	
 	items = Item.create([{name: 'Apple Sauce 8oz', category: 'Jars', price: 5 }, {name: 'Carrot Top Pesto 8oz', category: 'Jars', price: 12 }, {name: 'Tomato Jam 8oz', category: 'Jars', price: 12 }, 
 	{name: 'Pickled Dilly Beans 16oz', category: 'Jars', price: 12 }, {name: 'Preserved Kumquats 12oz', category: 'Jars', price: 15 }, {name: 'Lacto-Fermented Celery Quart', category: 'Jars', price: 15 },
 	{name: 'Lacto-Fermented Cucumbers Quart', category: 'Jars', price: 15 }, {name: 'Preserved Lemons Quart', category: 'Jars', price: 15 }, {name: 'Pickled Blenheim Apricots 8oz', category: 'Jars', price: 12 }, 
@@ -21,5 +22,4 @@
 	{name: '5lb. Rye Flour', category: 'Bulk', price: 8 }, {name: '5lb. Whole Wheat Flour', category: 'Bulk', price: 8 }, {name: '1 Gal. Raw Milk', category: 'Dairy', price: 15 }, {name: 'Half Gal. Raw Milk', category: 'Dairy', price: 10 },
 	{name: '1 Qt. House Yogurt', category: 'Dairy', price: 20 }, {name: '6 Eggs', category: 'Dairy', price: 3.50 }, {name: '12 Eggs', category: 'Dairy', price: 7 },
 	{name: '6 Eggs', category: 'Dairy', price: 3.50 }, {name: '500g Raw Cultured Butter', category: 'Dairy', price: 12 }, {name: '1/4 Gal. Raw Kefir', category: 'Dairy', price: 6 },
-	{name: 'Raw Goats Milk Laundry Soap', category: 'Hall Closet', price: 8 }, {name: 'Raw Goats Milk Body Soap', category: 'Hall Closet', price: 12 },       ])
-	{name: 'Raw Goats Milk Laundry Soap', category: 'Hall Closet', price: 8 }, {name: 'Raw Goats Milk Body Soap', category: 'Hall Closet', price: 12 },       ])
+	{name: 'Raw Goats Milk Laundry Soap', category: 'Hall Closet', price: 8 }, {name: 'Raw Goats Milk Body Soap', category: 'Hall Closet', price: 12 }       ])

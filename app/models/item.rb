@@ -2,7 +2,7 @@ class Item
   include Mongoid::Document
 
 
-  # has_and_belongs_to_many :orders
+  has_and_belongs_to_many :orders
 
   field :name, type: String
   field :category, type: String
